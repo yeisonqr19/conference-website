@@ -1,6 +1,7 @@
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -13,8 +14,10 @@
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 62.5%;
+  /*1rem:10px*/
   line-height: 1.4;
+  box-sizing: border-box;
 }
 
 /*
@@ -56,12 +59,7 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
   vertical-align: middle;
 }
 
@@ -97,6 +95,183 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+:root {
+  --fuenteptsans: 'PT Sans', sans-serif;
+  --fuenteopsans: 'Open Sans', sans-serif;
+  --fuenteoswald: 'Oswald', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-size: 1.6rem;
+  font-family: var(--fuenteopsans);
+}
+
+h2 {
+  font-family: var(--fuenteoswald);
+}
+
+a{
+  text-decoration: none;
+}
+
+.contenedor {
+  width: 98%;
+  margin: 0 auto;
+}
+
+@media(min-width:480px) {
+  .contenedor {
+    width: 95%;
+  }
+}
+
+@media(min-width:768px) {
+  .contenedor {
+    width: 90%;
+  }
+}
+
+@media(min-width:992px) {
+  .contenedor {
+    width: 90%;
+    max-width: 110rem;
+  }
+}
+
+/*header*/
+
+.hero {
+  background-image: url(../img/encabezado.jpg);
+  height: 100vh;
+  background-position: top center;
+  background-size: cover;
+}
+
+.contenido-header {
+  padding-top: 5rem;
+}
+
+@media(min-width:768px) {
+  .contenido-header {
+    padding-top: 2rem;
+  }
+}
+
+nav.redes-sociales {
+  text-align: center;
+}
+
+nav.redes-sociales a {
+  font-size: 3rem;
+  color: white;
+  margin-right: 2rem;
+}
+
+nav.redes-sociales a:last-of-type {
+  margin-right: 0;
+}
+
+.informacion-evento {
+  text-align: center;
+  color: white;
+}
+
+.informacion-evento p {
+  margin: 0;
+  display: inline;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.informacion-evento p i {
+  color: #fe4918;
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+
+.informacion-evento .posicion-iconos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+@media(min-width:768px) {
+  .informacion-evento .posicion-iconos {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+h1.nombre-sitio {
+  font-family: var(--fuenteptsans);
+  font-size: 15vw;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+@media(min-width:768px) {
+  h1.nombre-sitio {
+    font-size: 10vw;
+  }
+}
+
+p.slogan {
+  text-transform: none;
+}
+
+p.slogan span {
+  font-weight: bold;
+}
+
+/*barra*/
+
+.barra {
+  background-color: #353535;
+  padding: 2rem 0;
+}
+
+.logo {
+  width: 80%;
+}
+
+.logo img {
+  width: 100%;
+}
+
+@media(min-width:768px) {
+  .logo {
+    width: 33%;
+    float: left;
+  }
+}
+
+/*navegacion principal*/
+
+.navegacion-principal {
+  display: none;
+}
+
+@media(min-width:768px) {
+  .navegacion-principal {
+    width: 67%;
+    display: block;
+    float: right;
+    text-align: right;
+  }
+}
 
 /* ==========================================================================
    Helper classes
@@ -138,8 +313,7 @@ textarea {
 * https://www.drupal.org/node/897638
 */
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
+.sr-only.focusable:active, .sr-only.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -169,8 +343,7 @@ textarea {
 *    `:before` to contain the top-margins of child elements.
 */
 
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
   content: " ";
   /* 1 */
   display: table;
@@ -191,10 +364,7 @@ textarea {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -205,17 +375,14 @@ textarea {
    ========================================================================== */
 
 @media print {
-  *,
-  *:before,
-  *:after {
+  *, *:before, *:after {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  a,
-  a:visited {
+  a, a:visited {
     text-decoration: underline;
   }
   a[href]:after {
@@ -228,15 +395,13 @@ textarea {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
+  a[href^="#"]:after, a[href^="javascript:"]:after {
     content: "";
   }
   pre {
     white-space: pre-wrap !important;
   }
-  pre,
-  blockquote {
+  pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
@@ -247,19 +412,14 @@ textarea {
   thead {
     display: table-header-group;
   }
-  tr,
-  img {
+  tr, img {
     page-break-inside: avoid;
   }
-  p,
-  h2,
-  h3 {
+  p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
-  h2,
-  h3 {
+  h2, h3 {
     page-break-after: avoid;
   }
 }
-
