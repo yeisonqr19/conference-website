@@ -100,6 +100,8 @@ textarea {
   --fuenteptsans: 'PT Sans', sans-serif;
   --fuenteopsans: 'Open Sans', sans-serif;
   --fuenteoswald: 'Oswald', sans-serif;
+  --colornaranja: #fe4918;
+  --colornegro: #353535;
 }
 
 html {
@@ -116,11 +118,40 @@ body {
   font-family: var(--fuenteopsans);
 }
 
-h2 {
-  font-family: var(--fuenteoswald);
+.seccion {
+  padding: 3rem 0;
 }
 
-a{
+.seccion p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--fuenteoswald);
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*para poner el separador:*/
+
+h2::after {
+  content: '';
+  margin: 0 auto;
+  background-image: url(../img/separador.png);
+  height: 3rem;
+  width: 10rem;
+  display: block;
+}
+
+@media(min-width:768px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+a {
   text-decoration: none;
 }
 
@@ -194,7 +225,7 @@ nav.redes-sociales a:last-of-type {
 }
 
 .informacion-evento p i {
-  color: #fe4918;
+  color: var(--colornaranja);
   font-size: 3rem;
   margin-right: 0.5rem;
 }
@@ -239,12 +270,13 @@ p.slogan span {
 /*barra*/
 
 .barra {
-  background-color: #353535;
+  background-color: var(--colornegro);
   padding: 2rem 0;
 }
 
 .logo {
   width: 80%;
+  float: left;
 }
 
 .logo img {
@@ -254,7 +286,6 @@ p.slogan span {
 @media(min-width:768px) {
   .logo {
     width: 33%;
-    float: left;
   }
 }
 
@@ -264,6 +295,27 @@ p.slogan span {
   display: none;
 }
 
+.navegacion-principal a {
+  font-family: var(--fuenteoswald);
+  color: white;
+  text-decoration: none;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.navegacion-principal a:hover {
+  background-color: var(--colornaranja);
+}
+
+.navegacion-principal a:hover:last-child {
+  color: white;
+}
+
 @media(min-width:768px) {
   .navegacion-principal {
     width: 67%;
@@ -271,6 +323,46 @@ p.slogan span {
     float: right;
     text-align: right;
   }
+  .navegacion-principal a {
+    line-height: 6.5rem;
+    padding: 0 1rem;
+    margin: 0 1rem 0 0;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+  }
+  .navegacion-principal a:last-child {
+    margin-right: 0;
+    color: var(--colornaranja);
+    border: 0.2rem solid var(--colornaranja);
+  }
+}
+
+/*menu movil*/
+
+.menu-movil {
+  width: 6rem;
+  display: block;
+  float: right;
+  text-align: right;
+  margin-top: 1.2rem;
+}
+
+.menu-movil:hover {
+  cursor: pointer;
+}
+
+@media(min-width:768px) {
+  .menu-movil {
+    display: none;
+  }
+}
+
+.menu-movil span {
+  height: 0.8rem;
+  margin-bottom: 0.6rem;
+  background-color: white;
+  display: block;
 }
 
 /* ==========================================================================
