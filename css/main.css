@@ -134,6 +134,12 @@ h2 {
   text-transform: uppercase;
 }
 
+@media(min-width:768px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
 /*para poner el separador:*/
 
 h2::after {
@@ -145,15 +151,10 @@ h2::after {
   display: block;
 }
 
-@media(min-width:768px) {
-  h2 {
-    font-size: 4rem;
-  }
-}
-
 a {
   text-decoration: none;
 }
+
 
 .contenedor {
   width: 98%;
@@ -298,7 +299,6 @@ p.slogan span {
 .navegacion-principal a {
   font-family: var(--fuenteoswald);
   color: white;
-  text-decoration: none;
   font-size: 2.1rem;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
@@ -364,6 +364,147 @@ p.slogan span {
   background-color: white;
   display: block;
 }
+
+/**talleres**/
+.programa{
+  position:relative;
+}
+
+.contenedor-video{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.contenido-programa{
+  position:absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+}
+
+.programa-evento{
+  background-color: rgba(255, 255, 255, 0.829);
+  padding:1.5rem;
+  margin-top:8rem;
+}
+
+@media(min-width:768px){
+  .programa-evento{
+  width: 80%;
+  }
+}
+
+@media(min-width:992px){
+  .programa-evento{
+    width: 50%;
+  }
+}
+
+.menu-programa{
+  width: 100%;
+  border-bottom:0.1rem solid var(--colornaranja);
+  padding-bottom:1rem;
+}
+
+.menu-programa a{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  padding-bottom:1rem;
+  margin-bottom:1rem;
+  font-family:var(--fuenteoswald);
+  color:black;
+  font-size:2rem;
+}
+
+.menu-programa a i{
+  color:var(--colornaranja);
+  font-size:3rem;
+}
+
+@media(min-width:768px){
+
+  .menu-programa a{
+    display:inline-block;
+    margin-right: 3rem;
+    padding-bottom:0;
+    font-size:2.5rem;
+  }
+
+  .menu-programa a i{
+    margin-right: 1rem;
+  }
+}
+
+/**eventos**/
+.detalle-evento{
+  margin-top:1rem;
+  border-bottom: 0.1rem solid black;
+  padding: 0 1rem;
+}
+
+.detalle-evento:last-of-type{
+  border-bottom: none;
+}
+
+.detalle-evento p{
+  font-size: 2rem;
+  margin-bottom: 1.7rem;
+  
+}
+
+.detalle-evento p i{
+  margin-right:1rem;
+  color:var(--colornaranja);
+  font-size:2.2rem;
+}
+
+.detalle-evento h3{
+  color:var( --colornaranja);
+  font-size:2rem;
+  margin:1rem 0 0 0;
+}
+
+.boton{
+  display:inline-block;
+  background-color: var(--colornaranja);
+  padding: 1.5rem 4rem;
+  color:white;
+  text-transform: uppercase;
+  font-family:var(--fuenteoswald);
+  font-weight: bold;
+  font-size:1.8rem;
+  margin-top:1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.boton:hover{
+  background-color: #e33000;
+}
+
+.float-right{
+  float: right;
+}
+
+/**seccion invitados**/
+.lista-invitados{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:2rem;
+  grid-gap: 2rem;
+  align-items:center;
+ 
+}
+
+@media(min-width:768px){
+  .lista-invitados{
+    grid-template-columns:repeat(3, 1fr);
+  }
+}
+
+
 
 /* ==========================================================================
    Helper classes
