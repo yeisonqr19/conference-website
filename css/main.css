@@ -59,7 +59,12 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio, canvas, iframe, img, svg, video {
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
   vertical-align: middle;
 }
 
@@ -108,7 +113,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -116,6 +123,11 @@ body {
   background-color: #f2f2f2;
   font-size: 1.6rem;
   font-family: var(--fuenteopsans);
+}
+
+/*TOOLS*/
+.clearpd {
+  padding: 0 !important;
 }
 
 .seccion {
@@ -265,6 +277,10 @@ h1.nombre-sitio {
   line-height: 1.2;
 }
 
+a h1 {
+  color: white;
+}
+
 @media(min-width:768px) {
   h1.nombre-sitio {
     font-size: 10vw;
@@ -334,6 +350,7 @@ p.slogan span {
     float: right;
     text-align: right;
   }
+
   .navegacion-principal a {
     line-height: 6.5rem;
     padding: 0 1rem;
@@ -342,6 +359,7 @@ p.slogan span {
     width: auto;
     text-align: center;
   }
+
   .navegacion-principal a:last-child {
     margin-right: 0;
     color: var(--colornaranja);
@@ -443,6 +461,7 @@ p.slogan span {
     padding-bottom: 0;
     font-size: 2.5rem;
   }
+
   .menu-programa a i {
     margin-right: 1rem;
   }
@@ -472,7 +491,7 @@ p.slogan span {
 }
 
 .detalle-evento h3 {
-  color: var( --colornaranja);
+  color: var(--colornaranja);
   font-size: 2rem;
   margin: 1rem 0 0 0;
 }
@@ -491,7 +510,8 @@ p.slogan span {
   border: 0.2rem solid var(--colornaranja);
 }
 
-.boton.hollow, .boton.hollow:hover {
+.boton.hollow,
+.boton.hollow:hover {
   background-color: white;
   color: var(--colornaranja);
   border: 0.1rem solid var(--colornaranja);
@@ -499,6 +519,7 @@ p.slogan span {
 
 .boton:hover {
   background-color: #e33000;
+  cursor: pointer;
 }
 
 .float-right {
@@ -531,9 +552,11 @@ p.slogan span {
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
   }
+
   .lista-invitados .invitado {
     position: relative;
   }
+
   .lista-invitados .invitado p {
     position: absolute;
     padding: 1.5rem 0 1.5rem 1rem;
@@ -693,7 +716,6 @@ p.numero {
 
 .mapa {
   height: 42rem;
-  background-color: green;
 }
 
 /**testimoniales**/
@@ -882,15 +904,188 @@ footer h3 span {
   }
 }
 
-.copyright{
+.copyright {
   background-color: #2e2e2e;
-  color:white;
+  color: white;
   text-align: center;
-  font-size:2rem;
-  margin:0;
-  padding:2rem;
-  font-family:var(--fuenteptsans);
+  font-size: 2rem;
+  margin: 0;
+  padding: 2rem;
+  font-family: var(--fuenteptsans);
 }
+
+/*PAGINAS INTERNAS*/
+
+/*Registro: */
+
+form.registro h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0 0 0;
+  font-size: 2rem;
+
+}
+
+form.registro label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+h4 {
+
+  text-transform: uppercase;
+  border-bottom: 0.2rem solid var(--colornaranja);
+  margin: 5rem 0 3rem 0;
+  font-size: 2.2rem;
+  display: block;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+div.caja {
+  background-color: white;
+  border: 0.1rem solid #e1e1e1;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+div.campo {
+  padding: 2rem;
+}
+
+div.campo input {
+  border: 0.1rem solid #cccccc;
+}
+
+div.registro {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+@media(min-width:768px) {
+  div.registro {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+}
+
+/*Este es el div para mostrar error*/
+#error {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+div.paquetes .tabla-precios:hover {
+  transform: none;
+  box-shadow: 0 0 0.5rem #666;
+  border: none;
+
+}
+
+div.paquetes .tabla-precios input {
+  display: block;
+  width: 10rem;
+  margin: 1rem auto 0 auto;
+}
+
+.contenido-dia {
+  padding: 2rem;
+  display: none;
+}
+
+@media(min-width:768px) {
+  .contenido-dia>div {
+    float: left;
+    width: 33.3%;
+  }
+
+}
+
+.contenido-dia>div p {
+  text-align: left;
+
+}
+
+.contenido-dia>div label {
+  display: block;
+  margin-right: 1rem;
+  font-weight: 400;
+}
+
+
+.contenido-dia>div input {
+  margin-right: 1rem;
+}
+
+.contenido-dia>div label time {
+  color: var(--colornaranja);
+  font-weight: bold;
+}
+
+/*Resumen Registro*/
+div.resumen p {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+div.resumen .extras {
+  float: left;
+  width: 50%;
+  padding: 3rem;
+}
+
+.resumen .extras .orden {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.resumen .extras .orden input {
+  margin: 1rem 0 0 0;
+}
+
+.resumen .total {
+  float: right;
+  width: 50%;
+  padding: 3rem;
+
+}
+
+.resumen input {
+  display: block;
+  margin: 1rem auto;
+}
+
+/*Resumen*/
+#lista_productos {
+  display: none;
+  background-color: rgba(225, 225, 225, 0.876);
+  padding: 2rem;
+  line-height: 2;
+  font-family: var(--fuenteptsans);
+  text-transform: capitalize;
+  box-shadow: 0px 0px 30px #000;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+/*total*/
+#suma_total {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--colornaranja);
+  font-family: var(--fuenteptsans);
+}
+
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes
@@ -932,7 +1127,8 @@ footer h3 span {
 * https://www.drupal.org/node/897638
 */
 
-.sr-only.focusable:active, .sr-only.focusable:focus {
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -962,7 +1158,8 @@ footer h3 span {
 *    `:before` to contain the top-margins of child elements.
 */
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   /* 1 */
   display: table;
@@ -983,7 +1180,10 @@ footer h3 span {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -994,36 +1194,49 @@ footer h3 span {
    ========================================================================== */
 
 @media print {
-  *, *:before, *:after {
+
+  *,
+  *:before,
+  *:after {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  a, a:visited {
+
+  a,
+  a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
-    content: " (" attr(href) ")";
+    content: " ("attr(href) ")";
   }
+
   abbr[title]:after {
-    content: " (" attr(title) ")";
+    content: " ("attr(title) ")";
   }
+
   /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-  a[href^="#"]:after, a[href^="javascript:"]:after {
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
     content: "";
   }
+
   pre {
     white-space: pre-wrap !important;
   }
-  pre, blockquote {
+
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
   /*
      * Printing Tables:
      * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -1031,14 +1244,21 @@ footer h3 span {
   thead {
     display: table-header-group;
   }
-  tr, img {
+
+  tr,
+  img {
     page-break-inside: avoid;
   }
-  p, h2, h3 {
+
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
-  h2, h3 {
+
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 }
