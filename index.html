@@ -13,8 +13,12 @@
   <script src="https://kit.fontawesome.com/ec82aa18ad.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald&family=PT+Sans&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    
+
+
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
@@ -46,7 +50,9 @@
             <p class="ciudad"><i class="fas fa-map-marker-alt"></i>Cartagena, Co</p>
           </div>
 
-          <a href="index.html"><h1 class="nombre-sitio">GdlWebCamp</h1></a>
+          <a href="index.html">
+            <h1 class="nombre-sitio">GdlWebCamp</h1>
+          </a>
           <p class="slogan">La mejor conferencia de <span>Diseño Web</span></p>
         </div>
         <!--.informacion-evento-->
@@ -105,12 +111,12 @@
     <div class="contenido-programa">
 
       <div class="contenedor">
-        <div class="programa-evento">
+        <div class="programa-evento clearfix">
           <h2>programa del evento</h2>
-          <nav class="menu-programa">
+          <nav class="menu-programa clearfix">
             <a href="#talleres"><i class="fas fa-code"></i>Talleres</a>
-            <a href=""><i class="fas fa-comments"></i>Conferencias</a>
-            <a href=""><i class="fas fa-university"></i>Seminarios</a>
+            <a href="#conferencias"><i class="fas fa-comments"></i>Conferencias</a>
+            <a href="#seminarios"><i class="fas fa-university"></i>Seminarios</a>
           </nav>
 
           <div id="talleres" class="info-curso ocultar clearfix">
@@ -131,6 +137,45 @@
 
           </div>
           <!--.cierre bloque talleres-->
+
+          <div id="conferencias" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Como ser Freelancer</h3>
+              <p><i class="far fa-clock"></i> 10:00 AM</p>
+              <p><i class="fas fa-calendar-alt"></i>20 de May</p>
+              <p><i class="fas fa-user"></i>Nicholas Schurman</p>
+            </div>
+
+            <div class="detalle-evento">
+              <h3>Tecnologias del Futuro</h3>
+              <p><i class="far fa-clock"></i> 12:00 PM</p>
+              <p><i class="fas fa-calendar-alt"></i>20 de May</p>
+              <p><i class="fas fa-user"></i>Victor Robles</p>
+            </div>
+            <a href="" class="boton float-right">Ver todos</a>
+
+          </div>
+          <!--Cierre bloque conferencias-->
+
+          <div id="seminarios" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Diseño UI/UX para Movíles</h3>
+              <p><i class="far fa-clock"></i> 10:00 AM</p>
+              <p><i class="fas fa-calendar-alt"></i>21 de May</p>
+              <p><i class="fas fa-user"></i>Harold Garcia</p>
+            </div>
+
+            <div class="detalle-evento">
+              <h3>Aprende a Programar en una mañana</h3>
+              <p><i class="far fa-clock"></i> 12:00 PM</p>
+              <p><i class="fas fa-calendar-alt"></i>21 de May</p>
+              <p><i class="fas fa-user"></i>Yeison Quiroz Reyes</p>
+            </div>
+            <a href="" class="boton float-right">Ver todos</a>
+
+          </div>
+          <!--Cierre bloque seminarios-->
+          
 
         </div>
         <!--cierre bloque programa evento-->
@@ -379,8 +424,9 @@
     window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
   </script>
   <script src="js/plugins.js"></script>
+
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"> </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

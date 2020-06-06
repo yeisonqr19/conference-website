@@ -1,20 +1,22 @@
 (function () {
-    'use strict';
+    'use-strict';
 
     var regalo = document.getElementById('regalo');
     document.addEventListener('DOMContentLoaded', function () {
 
         //para agregar el mapa a la pagina principal
-        var map = L.map('mapa').setView([10.430153, -75.535458], 17);
+        if (document.getElementById('mapa')) {
+            var map = L.map('mapa').setView([10.430564, -75.535759], 17);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-        L.marker([10.430153, -75.535458]).addTo(map)
-            .bindPopup('GDL WebCamp 2020 <br/> Boletos ya disponibles.')
-            .openPopup();
+            L.marker([10.430564, -75.535759]).addTo(map)
+                .bindPopup('Direccion de la Empresa')
+                .openPopup();
 
+        }
         //campos datos de usuario
         let nombre = document.getElementById('nombre');
         let apellido = document.getElementById('apellido');
@@ -146,10 +148,32 @@
             }
 
         }
-
-
-
-
-
     }); //CIERRE DOM CONTENT LOADED
 })();
+
+//jQuery:
+
+$(document).ready(function () {
+    'use-strict';
+
+    //Programa de conferencias:
+    //esto es para hacer el efecto de ir cambiando los menus en (conferencias, talleres y eventos).
+    $('.programa-evento .info-curso:first').show();
+    $('nav.menu-programa a:first').addClass('activo');
+    $('nav.menu-programa a:first').addClass('chulo-seleccion');
+
+    $('.menu-programa a').on('click', function () {
+        //esto es para saber que enlace del menu esta activo:
+        $('.menu-programa a').removeClass('activo');
+        $('.menu-programa a').removeClass('chulo-seleccion');
+        $(this).addClass('activo');
+        $(this).addClass('chulo-seleccion');
+
+        $('.ocultar').hide();
+        let enlace = $(this).attr('href');
+        $(enlace).fadeIn(1000);
+
+        return false;
+    })
+
+})

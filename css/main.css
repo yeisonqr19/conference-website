@@ -447,6 +447,7 @@ p.slogan span {
   font-family: var(--fuenteoswald);
   color: black;
   font-size: 2rem;
+  position:relative;
 }
 
 .menu-programa a i {
@@ -458,8 +459,13 @@ p.slogan span {
   .menu-programa a {
     display: inline-block;
     margin-right: 3rem;
-    padding-bottom: 0;
+    padding-bottom: 0.5rem;
     font-size: 2.5rem;
+    position:relative;
+  }
+
+  .menu-programa a:last-of-type{
+    margin-right:0;
   }
 
   .menu-programa a i {
@@ -960,8 +966,8 @@ div.campo input {
 div.registro {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: left;
+  text-align: center;
+    align-items: center;
   flex-wrap: wrap;
 }
 
@@ -1081,7 +1087,28 @@ div.resumen .extras {
   font-family: var(--fuenteptsans);
 }
 
+/*para el despliegue de los menus con jQuery: */
+div.ocultar{
+  display:none;
+}
 
+/*la flecha pequeña que sale en los tres elementos del menu navegacion*/
+
+.chulo-seleccion::after{
+  position: absolute;
+  content: '';
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right: auto;
+  width: 3rem;
+  height: 2rem;
+  background-image:url(../img/talleres-flecha.jpg);
+  z-index:3;
+  background-position: top center;
+  background-repeat: no-repeat;
+  bottom: -4rem;
+}
 
 
 
