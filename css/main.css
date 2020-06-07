@@ -447,7 +447,7 @@ p.slogan span {
   font-family: var(--fuenteoswald);
   color: black;
   font-size: 2rem;
-  position:relative;
+  position: relative;
 }
 
 .menu-programa a i {
@@ -461,11 +461,11 @@ p.slogan span {
     margin-right: 3rem;
     padding-bottom: 0.5rem;
     font-size: 2.5rem;
-    position:relative;
+    position: relative;
   }
 
-  .menu-programa a:last-of-type{
-    margin-right:0;
+  .menu-programa a:last-of-type {
+    margin-right: 0;
   }
 
   .menu-programa a i {
@@ -967,7 +967,7 @@ div.registro {
   display: flex;
   flex-direction: column;
   text-align: center;
-    align-items: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -1088,26 +1088,87 @@ div.resumen .extras {
 }
 
 /*para el despliegue de los menus con jQuery: */
-div.ocultar{
-  display:none;
+div.ocultar {
+  display: none;
 }
 
 /*la flecha pequeña que sale en los tres elementos del menu navegacion*/
 
-.chulo-seleccion::after{
+.chulo-seleccion::after {
   position: absolute;
   content: '';
-  left:0;
-  right:0;
-  margin-left:auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
   margin-right: auto;
   width: 3rem;
   height: 2rem;
-  background-image:url(../img/talleres-flecha.jpg);
-  z-index:3;
+  background-image: url(../img/talleres-flecha.jpg);
+  z-index: 3;
   background-position: top center;
   background-repeat: no-repeat;
   bottom: -4rem;
+}
+
+/** mnipulacion de textos con lettering **/
+
+h1.nombre-sitio span {
+  position: relative;
+  text-shadow: 0 0 3rem black;
+}
+
+@media(min-width:992px) {
+  .char1 {
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .char2 {
+    top: 0px;
+    left: -2rem;
+  }
+
+  .char3 {
+    top: 1rem;
+    right: 2rem;
+  }
+
+  .char4 {
+    top: 0.5rem;
+    right: 1rem;
+  }
+
+  .char5 {
+    top: 1.5rem;
+    right: 1rem;
+  }
+
+  .char6 {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .char7 {
+    top: 2rem;
+    left: -1rem;
+  }
+
+  .char8 {
+    top: 0;
+    right: 0.5rem;
+  }
+
+  .char9 {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .char10 {
+    top: 2rem;
+    right: 2rem;
+  }
+
+
 }
 
 

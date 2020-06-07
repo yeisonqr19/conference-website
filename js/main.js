@@ -176,4 +176,33 @@ $(document).ready(function () {
         return false;
     })
 
+    //Animaciones Para los Numeros:
+
+    //aqui utilizo el metodo nth-child, el cual me permite seleccionar a un hijo de un elemento dependiendo de su posicion, cada posicion tiene un numero definido.
+    $('.resumen-evento li:nth-child(1) p').animateNumber({
+        number: 6
+    }, 1800);
+    $('.resumen-evento li:nth-child(2) p').animateNumber({
+        number: 15
+    }, 1800);
+    $('.resumen-evento li:nth-child(3) p').animateNumber({
+        number: 3
+    }, 1800);
+    $('.resumen-evento li:nth-child(4) p').animateNumber({
+        number: 9
+    }, 1800);
+
+    //para hacer el conteo regresivo con el plugin countdown:
+
+    //toda esta informacion la extraje de la documentacion del plugin.
+    $('.cuenta-regresiva').countdown('2020/10/25 12:00:00', function (event) {
+        $('#dias').html(event.strftime('%D'));
+        $('#horas').html(event.strftime('%H'));
+        $('#minutos').html(event.strftime('%M'));
+        $('#segundos').html(event.strftime('%S'));
+    })
+
+    //plugin para animar los textos, utilizo el plugin lettering
+        $('.nombre-sitio').lettering();
+
 })
